@@ -1,0 +1,121 @@
+{% extends 'site/site.html' %}
+
+{% block data %}
+<div id="opus-show">
+    <div class="ti_top">
+        <div class="search">
+            {% if search.status is null %}
+            <form action="/review/opus/">
+            {% elseif search.status == '0' %}
+            <form action="/review/opus/start/">
+            {% else %}
+            <form action="/review/opus/finish/">
+            {% endif %}
+                <span class="alm">编号 / 公司名 / 作品名</span> <input type="text" name="name" value="{{search.name}}" /> <button class="btn">搜索</button>
+            </form>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="accreditation_list">
+        {% if neighbour.prev %}
+        {% if search.status is null %}
+        <a href="/review/opus/show/?id={{neighbour.prev.productionId}}"><div class="prev">上一作品</div></a>
+        {% elseif search.status == '0' %}
+        <a href="/review/opus/show/start/?id={{neighbour.prev.productionId}}"><div class="prev">上一作品</div></a>
+        {% else %}
+        <a href="/review/opus/show/finish/?id={{neighbour.prev.productionId}}"><div class="prev">上一作品</div></a>
+        {% endif %}
+
+        {% endif %}
+        {% if neighbour.next %}
+        {% if search.status is null %}
+        <a href="/review/opus/show/?id={{neighbour.next.productionId}}"><div class="next">下一作品</div></a>
+        {% elseif search.status == '0' %}
+        <a href="/review/opus/show/start/?id={{neighbour.next.productionId}}"><div class="next">下一作品</div></a>
+        {% else %}
+        <a href="/review/opus/show/finish/?id={{neighbour.next.productionId}}"><div class="next">下一作品</div></a>
+        {% endif %}
+        {% endif %}
+
+        <div class="fs14">
+            <p>编号：{{data.number}}</p>          
+            <p>作品：{{data.name}}</p>
+            <p>公司：{{data.company}}</p>
+        </div>
+        <div class="accreditation">
+            <div class="preview">
+                <div class="smallImg">
+                    <div class="scrollbutton smallImgUp disabled"></div>
+                    <div id="imageMenu">
+                        <ul>
+                            {% for val in data.resource %}
+                            <li id="onlickImg"><img src="/assets/pic/001.png" /><span class="on"></span></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="scrollbutton smallImgDown"></div>
+                </div><!--smallImg end-->
+
+                <div id="vertical" class="bigImg">
+                    <img src="pic/001.png" id="midimg" />
+                    <div style="display:none;" id="winSelector"></div>
+                </div><!--bigImg end-->
+
+                <div id="bigView" style="display:none;"><img src="" /></div>
+
+                <!--评分-->
+                <div class="clear"></div>
+                {% if rule %}
+                {% for val in rule %}
+                <div style="margin-top:10px;">
+                    {% if val.type == '1' %}
+                    <label for="valueB">{{val.name}}:</label>
+                    <select name="rule" id="valueB" class="slider" data-id="{{val.id}}" data-name="{{val.name}}" style="display:none">
+                        {% for i in 0..100 %}
+                        <option value="{{i}}">{{i}}</option>
+                        {% endfor %}
+                    </select>
+                    {% elseif val.type == '2' %}
+                    <input type="checkbox" name="rule" data-id="{{val.id}}" data-name="{{val.name}}" />{{val.name}}
+                    {% else %}
+                    {{val.name}}
+                    <select name="rule" data-id="{{val.id}}" data-name="{{val.name}}">
+                        <option></option>
+                        {% set option = explode(',', val.value) %}
+                        {% for v in option %}
+                        <option value="{{v}}">{{v}}</option>
+                        {% endfor %}
+                    </select>
+                    {% endif %}
+                </div>
+                {% endfor %}
+                <div style="margin-top:20px; padding-bottom:20px; text-align:right;"><a href="#1" class="btn action">评分</a></div>
+                {% endif %}
+
+                {% if content %}
+                    {% for val in content %}
+                        {% set v = json_decode(val.content) %}
+                        <div>
+                        {{v.name}}: <span style="font-family:Georgia, 'Times New Roman', Times, serif; font-size:32px;">{{v.val}}</span>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+                </div>
+            </div><!--preview end-->
+            
+            <div class="info">
+               {{data.content|raw}}
+            </div>
+            <input type="hidden" name="pid" value="{{data.productionId}}" />
+            <input type="hidden" name="aid" value="{{data.appraiseId}}" />
+        </div>
+    </div>
+</div>
+{% if search.status is null %}
+<input type="hidden" name="_" value="/review/opus/">
+{% elseif search.status == '0' %}
+<input type="hidden" name="_" value="/review/opus/start/">
+{% else %}
+<input type="hidden" name="_" value="/review/opus/finish/">
+{% endif %}
+{% endblock %}

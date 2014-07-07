@@ -1,0 +1,24 @@
+{% extends 'site/site.html' %}
+
+{% block data %}
+<div id="profile">
+    <div class="ti_top">
+         <h2>您好，评委{{data.nickName}}</h2>
+         <div class="clear"></div>
+     </div>
+     <div class="fs16">
+         您还有作品未评审<br />现在去 <a href="/review/opus/start/">评审作品</a> 或者 <a href="/review/opus/finish/">查看已评分作品</a>
+     </div>
+     <div class="fs14" style="margin-top:20px;">
+           <p>用户名：{{data.userName}}</p>          
+           <p>昵称：{{data.nickName}}</p>
+           <p>邮箱：{{data.emailAddress}}</p>
+           <p>手机：{{data.phone|default(data.mobile)}}</p>
+           <p>公司：{{data.company}}</p>
+           <p>职位：{{data.post}}</p>
+           <p>地址：{{data.address}}</p>
+           <!--用户信息，缺少请补全-->
+     </div>
+</div>
+<input type="hidden" name="_" value="/review/profile/">
+{% endblock %}

@@ -1,0 +1,634 @@
+body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #474747;
+    font-family: "Microsoft YaHei","微软雅黑","宋体", Arial,Helvetica,sans-serif;
+}
+#content {background-color: #e4e2e3; padding-bottom: 20px; min-height: 500px;}
+.navbar-inverse .navbar-inner {
+    background-color: #474747;
+    border-color: #474747;
+    background-image: -moz-linear-gradient(top,#474747,#505050);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#474747),to(#505050));
+    background-image: -webkit-linear-gradient(top,#474747,#505050);
+    background-image: -o-linear-gradient(top,#474747,#505050);
+    background-image: linear-gradient(to bottom,#474747,#505050);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff474747',endColorstr='#ff505050',GradientType=0);
+}
+.navbar-inverse i {
+    margin-top: 4px;
+}
+.feedback a, .backtop a {
+    background: url(../img/icon.png) no-repeat;
+}
+.feedback {
+    position: fixed;
+    _position: absolute;
+    bottom: 70px;
+    _bottom: "auto";
+}
+.feedback a {
+    width: 40px;
+    height: 40px;
+    display: block;
+    background-position: 0 -50px;
+}
+.feedback a:hover {
+    background-position: -42px -50px;
+}
+
+.backtop {
+    position: fixed;
+    display: none;
+    _position: absolute;
+    bottom: 115px;
+    _bottom: "auto";
+}
+.backtop a {
+    width: 40px;
+    height: 40px;
+    display: block;
+    background-position: 0 0;
+}
+.backtop a:hover {
+    background-position: -42px 0;
+}
+
+hr {
+    margin: 5px 0;
+}
+.nav-tabs {
+    margin-bottom: 0;
+}
+.tab-content {
+    padding: 20px 20px 0 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-top-color: transparent;
+    background-color: #fff;
+}
+
+div.block {
+    position: relative;
+    padding-right: 4px;
+}
+div.block label.tip {
+    position: absolute;
+    color: #808080;
+    font-size: 14px;
+    left: 10px;
+    top: 5px;
+    cursor: inherit;
+}
+
+div.money-preview {
+    _width:178px;
+    min-width:178px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    border:1px solid #C5C5C5;
+    background:/*#fff*/#FFFFE4;
+    position:absolute;
+    margin:2px 0 0;
+    z-index: 1000;
+}
+.well {
+    margin-bottom: 0;
+}
+.table tr th {
+    text-align: center;
+}
+.table td.center {
+    text-align: center;
+}
+.star {
+    color: #e01d00;
+}
+
+/* Footdiver
+-------------------------------------------------- */
+.footer { text-align: center; padding: 30px 0; border-top: 1px solid #e5e5e5; background-color: #474747; }
+.footer p { margin-bottom: 0; color: #777; }
+.footer-links { margin: 10px 0; }
+.footer-links li { display: inline; padding: 0 2px; }
+.footer-links li:first-child { padding-left: 0; }
+.footer p a, .footer-links li a { color: #777; }
+.footer p a:hover, .footer-links li a:hover { color: #fff; }
+
+/* Login
+-------------------------------------------------- */
+.form-signin {
+    max-width: 300px;
+    padding: 19px 29px 29px;
+    margin: 10px auto 10px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+            border-radius: 5px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+       -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+            box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+    margin-bottom: 10px;
+}
+.form-signin input[type="text"],
+.form-signin input[type="password"] {
+    font-size: 16px;
+    height: auto;
+    line-height: auto;
+    margin-bottom: 15px;
+    padding: 7px 9px;
+    +height: 30px;
+    +line-height: 30px;
+    +padding : 0 8px;;
+}
+
+/* Side Menu
+--------------------------------------*/
+.sidebar-menu{
+}
+.menu-first{
+    height:45px;
+    line-height:45px;
+    background-color: #e9e9e9;
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #e1e1e1;
+    padding: 0;
+    font-size: 14px;
+    font-weight: normal;
+    text-indent: 50px;
+}
+.menu-first:hover{
+    text-decoration: none;
+    background-color: #d6d4d5;
+    border-top: 1px solid #b7b7b7;
+    border-bottom: 1px solid #acacac;
+}
+.menu-second li a{
+    background-color: #f6f6f6;
+    height:31px;
+    line-height:31px;
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
+    font-size: 12px;
+    text-indent: 70px;
+}
+.menu-second li a:hover {
+    text-decoration: none;
+    background-color: #66c3ec;
+    border-top: 1px solid #83ceed;
+    border-bottom: 1px solid #83ceed;
+    border-right: 3px solid #f8881c;
+    border-left: 3px solid #66c3ec;
+}
+.menu-second-selected {
+    background-color: #66c3ec;
+    height:31px;
+    line-height:31px;
+    border-top: 1px solid #83ceed;
+    border-bottom: 1px solid #83ceed;
+    border-right: 3px solid #f8881c;
+    border-left: 3px solid #66c3ec;
+    text-align:center;
+}
+.nav-list,.nav-list li a{
+    padding: 0px;
+    margin: 0px;
+}
+.sidebar-menu i {
+    padding-right: 5px;
+}
+.layout-page {
+    width: 100%;
+    height: 95%;
+    min-width: 1200px;
+    min-height: 95%;
+    z-index: 0;
+}
+.layout-side {
+    width: 220px;
+    background-color: #f3f3f3;
+    top: 42px;
+    bottom: 0;
+    z-index: 0;
+}
+.layout-main {
+    border-left: 1px solid #c6c8cc;
+    top: 42px;
+    left: 220px;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #fff;
+}
+
+.bb5 {
+    margin-bottom: 5px;
+}
+
+.table-mob tr {
+    height: 32px;
+}
+.table-mob tr td {
+    line-height: 32px;
+}
+.table-dashed tr td, tr.dashed td {
+    border-top-style: dashed;
+}
+.pic-preview {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+.pic-preview li {
+    width: 110px\9;
+}
+.pic-preview img {
+    height: 100px;
+    width: 100px;
+} 
+.pic-preview span {
+    position: relative;
+    top: -46px;
+    left: -18px;
+    background-color: #ff0000;
+    z-index: 999;
+    top: -112px\9;
+    left: 98px\9;
+}
+img.img-polaroid {
+    width: 100px\9;
+    height: 100px\9;
+}
+
+.operate-footer {
+    padding: 14px 15px 15px;
+    margin-bottom: 0;
+    text-align: right;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    -webkit-border-radius: 0 0 6px 6px;
+    -moz-border-radius: 0 0 6px 6px;
+    border-radius: 0 0 6px 6px;
+    -webkit-box-shadow: inset 0 1px 0 #fff;
+    -moz-box-shadow: inset 0 1px 0 #fff;
+    box-shadow: inset 0 1px 0 #fff;
+    margin-top: 10px;
+}
+
+#data textarea {
+    width: 90%;
+}
+
+/* Login 
+-----------------------*/
+#login {
+    width: 500px;
+    height: 300px;
+    margin: 100px auto;
+    display: block;
+    padding: 9.5px;
+    font-size: 13px;
+    line-height: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+#login .control-group {
+    margin-left: 100px;
+}
+
+.margin-auto{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.margin-left-auto{
+    margin-left: 10px;
+}
+.margin-right-auto{
+    margin-right: 10px;
+}
+.auto-scrollable-x{
+    overflow-x: auto;
+}
+.auto-scrollable-y{
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* Wx Message
+-----------------------*/
+.wechat .mod-msg {
+    width: 292px;
+    min-height: 405px;
+    padding: 9px;
+    border: 2px solid #cecece;
+    border-radius: 6px;
+    background-color: #f7f7f7;
+    float: left;
+}
+.wechat .mod-msg .mod-msg-txt {
+    width: 266px;
+}
+.wechat .mod-msg>.mod-msg-txt>.user {
+    display: inline-block;
+    margin-right: 9px;
+    border: 1px solid #c6c8cc;
+    border-radius: 4px;
+    vertical-align: top;
+}
+.wechat .mod-default-avatar {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    background: url(../img/default-avatar.png) no-repeat 0 0;
+    background-color: #4c913f;
+    border-radius: 3px;
+    vertical-align: middle;
+}
+.wechat .mod-msg>.mod-msg-txt>.content {
+    display: inline-block;
+    width: 164px;
+    padding: 15px;
+    background-color: #afdc45;
+    border: 1px solid #87a44a;
+    border-radius: 6px;
+    position: relative;
+}
+.wechat .mod-msg>.mod-msg-txt>.content>.arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6.5px 8px 6.5px 0;
+    border-color: transparent #87a44a transparent transparent;
+    position: absolute;
+    left: -8px;
+}
+.wechat .mod-msg>.mod-msg-txt>.content>.arrow:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6.5px 8px 6.5px 0;
+    border-color: transparent #afdc45 transparent transparent;
+    position: absolute;
+    top: -6px;
+    left: 1px;
+}
+.wechat .mod-msg>.mod-msg-txt>.content>.msg {
+    display: inline-block;
+    word-break: break-all;
+    overflow: hidden;
+}
+.wechat .mod-msg-editor {
+    width: 398px;
+    padding: 20px;
+    border: 1px solid #acacac;
+    border-radius: 6px;
+    box-shadow: 0 0 6px #acacac;
+    position: relative;
+    margin-left: 330px;
+}
+.wechat .mod-msg-editor>.mod-msg-arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px 17px 15px 0;
+    border-color: transparent #acacac transparent transparent;
+    position: absolute;
+    left: -17px;
+    transition: top .2s;
+    -ms-transition: top .2s;
+    -webkit-transition: top .2s;
+    -o-transition: top .2s;
+    -moz-transition: top .2s;
+}
+.wechat .mod-msg-editor>.mod-msg-arrow:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px 17px 15px 0;
+    border-color: transparent #f5f5f5 transparent transparent;
+    position: absolute;
+    bottom: -15px;
+    left: 1px;
+}
+/* multi */
+.wechat .mod-msg>.mod-msg-cover.active, .mod-msg>.mod-msg-item.active {
+    border-color: #4c913f;
+    position: relative;
+    z-index: 2;
+    transition: border-color .2s;
+}
+.wechat .mod-msg>.mod-msg-cover {
+    padding: 10px 8px;
+    border-radius: 6px 6px 0 0;
+}
+.wechat .mod-msg>.mod-msg-cover, .mod-msg>.mod-msg-item {
+    border: 2px solid #cecece;
+    cursor: pointer;
+    position: relative;
+    background-color: #fff;
+}
+
+.wechat .mod-msg.multi>.mod-msg-cover>h2 {
+    margin-bottom: 0;
+    padding: 8px 24px;
+    position: absolute;
+    right: 8px;
+    bottom: 10px;
+    left: 8px;
+    color: #fff;
+    background-color: #000;
+    background-color: rgba(0,0,0,.6);
+    z-index: 1;
+    font-size: 16px;
+    font-weight: 100;
+}
+.wechat .mod-msg>.mod-msg-cover>h2 {
+    margin-bottom: 12px;
+    font-size: 19px;
+    line-height: 22px;
+    font-weight: 700;
+    word-break: break-all;
+}
+.wechat .mod-msg>.add {
+    display: block;
+    width: 288px;
+    height: 82px;
+    border-width: 0 2px 2px;
+    border-style: dashed;
+    border-color: #ddd;
+    border-radius: 0 0 6px 6px;
+    font: 0/0 a;
+    outline: 0;
+    background: #f7f7f7 url(../img/plus.png) no-repeat center 18px;
+    cursor: pointer;
+}
+.wechat .mod-msg>.add:hover {
+    background: #E8E8E8 url(../img/plus.png) no-repeat center -66px;
+}
+.wechat .mod-msg .mod-msg-options {
+    display: none;
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    background: #000;
+    background: rgba(0,0,0,.6);
+    color: #fff;
+    text-align: center;
+    -ms-filter: "alpha(Opacity=60)";
+}
+.wechat .mod-msg .mod-msg-options p {
+    display: inline-block;
+    margin: 20px 26px 0;
+    color: #fff;
+    text-align: center;
+}
+.wechat .mod-msg .multi-first .mod-msg-options p {
+    margin: 50px 26px 0;
+}
+.wechat .mod-msg .mod-msg-options span {
+    display: block;
+    width: 47px;
+    height: 47px;
+    line-height: 50px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000;
+    border-color: rgba(255,255,255,1);
+    border-radius: 50%;
+    background: #000;
+    background: rgba(0,0,0,.5);
+    text-align: center;
+    font-size: 14px;
+    transition: transform .2s;
+    -ms-transition: -ms-transform .2s;
+    -webkit-transition: -webkit-transform .2s;
+    -o-transition: -o-transform .2s;
+    -moz-transition: -moz-transform .2s;
+}
+
+.wechat .mod-msg>.mod-msg-item {
+    margin-top: -2px;
+    padding: 12px 10px 12px 12px;
+}
+.wechat .mod-msg>.mod-msg-cover, .mod-msg>.mod-msg-item {
+    border: 2px solid #cecece;
+    cursor: pointer;
+    position: relative;
+    background-color: #fff;
+}
+/* Menu
+-------------------------------------------------- */
+#menu .menu-container {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+#menu .menu-list {
+    width: 300px;
+    border-right: 1px solid #cecece;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#menu .menu-list dl {
+    border-bottom: 1px dashed #cecece;
+}
+#menu .menu-list .inner_menu_item {
+    padding-left: 10px;
+    position: relative;
+    line-height: 32px;
+}
+#menu .menu-list .inner_menu_item:hover, .inner_menu_item.active {
+    background-color: #d6d6d6;
+}
+#menu .menu-list .btn-group {
+    display: none;
+    position: absolute;
+    top: 3px;
+    right: 1em;
+}
+#menu .menu-setting {
+    display: block;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 65%;
+}
+#menu .menu-setting .header {
+    height: 46px;
+    line-height: 46px;
+    border-bottom: 1px dashed #cecece;
+}
+#menu .menu-setting .menu-action {
+    margin-top: 10px;
+}
+
+#menu .icon_menu_action {
+    width: 144px;
+    height: 144px;
+    vertical-align: middle;
+    display: inline-block;
+}
+#menu a:hover .icon_menu_action.send {
+    background: url("../img/advanced_menu_setting_z.png") 0 -154px no-repeat;
+}
+#menu .icon_menu_action.send {
+    background: url("../img/advanced_menu_setting_z.png") 0 0 no-repeat;
+}
+#menu a:hover .icon_menu_action.url {
+    background: url("../img/advanced_menu_setting_z.png") 0 -461px no-repeat;
+}
+#menu .icon_menu_action.url {
+    background: url("../img/advanced_menu_setting_z.png") 0 -308px no-repeat;
+}
+#menu .menu-setting .menu-action .init {
+    text-align: center;
+}
+#menu .menu-setting .menu-action .init p {
+    text-align: left;
+    padding-bottom: 20px;
+}
+#menu .menu-setting .menu-action .init a {
+    color: #222;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+#menu .menu-setting .menu-action .init a strong {
+    display: block;
+    font-weight: 400;
+    font-style: normal;
+}
+#menu #wechat {
+    margin-bottom: 10px;
+}
+#user-see .table th {
+    text-align: right;
+}
+#user-see .table button,a {
+    margin-left: 10px;
+	display: inline-flex;
+}
+#user-see .user-news-show{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 3px 7px;
+	line-height:30px;
+}
+#user-see .address-show .address {
+    margin-left: 10px;
+}

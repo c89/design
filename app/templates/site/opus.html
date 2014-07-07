@@ -1,0 +1,69 @@
+{% extends 'site/site.html' %}
+
+{% block data %}
+<div id="opus">
+    <div class="ti_top">
+        <h2>作品预览</h2>
+        <div class="search">
+            {% if search.status is null %}
+            <form action="/review/opus/">
+            {% elseif search.status == '0' %}
+            <form action="/review/opus/start/">
+            {% else %}
+            <form action="/review/opus/finish/">
+            {% endif %}
+                <span class="alm">编号 / 公司名 / 作品名</span> <input type="text" name="name" value="{{search.name}}" /> <button class="btn">搜索</button>
+            </form>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="classification fs14"><span>选择类别：</span>
+        {% if search.status is null %}
+        <a {% if not search.category %} class="onclick" {% endif %} href="/review/opus/">所有类别</a>
+        {% elseif search.status == '0' %}
+        <a {% if not search.category %} class="onclick" {% endif %} href="/review/opus/start/">所有类别</a>
+        {% else %}
+        <a {% if not search.category %} class="onclick" {% endif %} href="/review/opus/finish/">所有类别</a>
+        {% endif %}
+        {% for val in category %}
+            {% if search.status is null %}
+            <a {% if search.category == val.categoryId %} class="onclick" {% endif %} href="/review/opus/?category={{val.categoryId}}">{{val.name}}</a>
+            {% elseif search.status == '0' %}
+            <a {% if search.category == val.categoryId %} class="onclick" {% endif %} href="/review/opus/start/?category={{val.categoryId}}">{{val.name}}</a>
+            {% else %}
+            <a {% if search.category == val.categoryId %} class="onclick" {% endif %} href="/review/opus/finish/?category={{val.categoryId}}">{{val.name}}</a>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <div class="list">
+        {% for val in data %}
+        <div class="li">
+            <div class="pic">
+            {% if search.status is null %}
+            <a href="/review/opus/show/{% if search.status is not null %}/{{search.status}}/{% endif %}?id={{val.productionId}}"><img src="/assets/upload/{{val.img}}" /></a>
+            {% elseif search.status == '0' %}
+            <a href="/review/opus/show/start/?id={{val.productionId}}"><img src="/assets/upload/{{val.img}}" /></a>
+            {% else %}
+            <a href="/review/opus/show/finish/?id={{val.productionId}}"><img src="/assets/upload/{{val.img}}" /></a>
+            {% endif %}
+            </div>
+            <p>编号：{{val.number}}</p>
+            <p>公司：{{val.company}}</p>
+            <p>作品：{{val.name}}</p>
+            <p>状态：{% if val.status == '1' %}已评审{% else %}未评审{% endif %}</p>
+            </div>
+        {% else %}
+        <div>暂无作品，请稍等</div>
+        {% endfor %}
+        {{ pagination |raw }}
+    </div>
+</div>
+{% if search.status is null %}
+<input type="hidden" name="_" value="/review/opus/">
+{% elseif search.status == '0' %}
+<input type="hidden" name="_" value="/review/opus/start/">
+{% else %}
+<input type="hidden" name="_" value="/review/opus/finish/">
+{% endif %}
+
+{% endblock %}

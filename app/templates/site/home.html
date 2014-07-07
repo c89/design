@@ -1,0 +1,27 @@
+{% extends 'site/site.html' %}
+
+{% block data %}
+<div id="home">
+     <div class="text">
+         <h1>欢迎您担任评审！</h1>
+     </div>
+     <div class="text">
+         <p class="fs16">尊敬的评委，感谢您担任本届大赛的评审，您的参与将使本次大赛更具权威性和影响力。</p>
+     </div>
+     {% if rule %}
+     <div class="text fs14">
+         <p>本届大赛的评审时间为：</p>
+         <p>{{rule.start|date('Y年m月d日')}}-{{rule.end|date('Y年m月d日')}}。</p>
+     </div>
+     <div class="text">
+         <p class="fs14">评审标准：</p>
+     </div>
+     <div class="text">
+     {{rule.desc|raw}}
+     </div>
+     {% else %}
+        评审活动即将开始，敬请等待...
+     {% endif %}
+</div>
+<input type="hidden" name="_" value="/review/">
+{% endblock %}

@@ -1,0 +1,433 @@
+ERROR - 2014-07-02T16:08:17+08:00 - exception 'RuntimeException' with message 'Unable to create the cache directory (./app/cache/twig/76/e8).' in /var/www/design/Shark/Helper/Twig/Environment.php:1236
+Stack trace:
+#0 /var/www/design/Shark/Helper/Twig/Environment.php(334): Twig_Environment->writeCacheFile('./app/cache/twi...', '<?php??/* site/...')
+#1 /var/www/design/Shark/Helper/Twig.php(55): Twig_Environment->loadTemplate('site/home.html')
+#2 /var/www/design/Shark/Core/Control.php(36): Shark\Helper\Twig->display('site/home.html', false)
+#3 /var/www/design/app/control/review/Home.php(29): Shark\Core\Control->display('site/home.html', false)
+#4 /var/www/design/app/control/review.php(45): app\control\review\Home->index()
+#5 [internal function]: {closure}()
+#6 /var/www/design/Slim/Route.php(462): call_user_func_array(Object(Closure), Array)
+#7 /var/www/design/Slim/Slim.php(1326): Slim\Route->dispatch()
+#8 /var/www/design/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#9 /var/www/design/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#10 /var/www/design/Shark/Middleware/Nocache.php(44): Slim\Middleware\MethodOverride->call()
+#11 /var/www/design/Slim/Middleware/PrettyExceptions.php(67): Shark\Middleware\Nocache->call()
+#12 /var/www/design/Slim/Slim.php(1271): Slim\Middleware\PrettyExceptions->call()
+#13 /var/www/design/index.php(84): Slim\Slim->run()
+#14 {main}
+ERROR - 2014-07-02T16:08:36+08:00 - exception 'ErrorException' with message 'Argument 1 passed to Twig_Template::display() must be an array, boolean given, called in /var/www/design/Shark/Helper/Twig.php on line 56 and defined' in /var/www/design/Shark/Helper/Twig/Template.php:250
+Stack trace:
+#0 /var/www/design/Shark/Helper/Twig/Template.php(250): Slim\Slim::handleErrors(4096, 'Argument 1 pass...', '/var/www/design...', 250, Array)
+#1 /var/www/design/Shark/Helper/Twig.php(56): Twig_Template->display(false)
+#2 /var/www/design/Shark/Core/Control.php(36): Shark\Helper\Twig->display('site/home.html', false)
+#3 /var/www/design/app/control/review/Home.php(29): Shark\Core\Control->display('site/home.html', false)
+#4 /var/www/design/app/control/review.php(45): app\control\review\Home->index()
+#5 [internal function]: {closure}()
+#6 /var/www/design/Slim/Route.php(462): call_user_func_array(Object(Closure), Array)
+#7 /var/www/design/Slim/Slim.php(1326): Slim\Route->dispatch()
+#8 /var/www/design/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#9 /var/www/design/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#10 /var/www/design/Shark/Middleware/Nocache.php(44): Slim\Middleware\MethodOverride->call()
+#11 /var/www/design/Slim/Middleware/PrettyExceptions.php(67): Shark\Middleware\Nocache->call()
+#12 /var/www/design/Slim/Slim.php(1271): Slim\Middleware\PrettyExceptions->call()
+#13 /var/www/design/index.php(84): Slim\Slim->run()
+#14 {main}
+ERROR - 2014-07-02T16:09:38+08:00 - exception 'ErrorException' with message 'Argument 1 passed to Twig_Template::display() must be an array, boolean given, called in /var/www/design/Shark/Helper/Twig.php on line 56 and defined' in /var/www/design/Shark/Helper/Twig/Template.php:250
+Stack trace:
+#0 /var/www/design/Shark/Helper/Twig/Template.php(250): Slim\Slim::handleErrors(4096, 'Argument 1 pass...', '/var/www/design...', 250, Array)
+#1 /var/www/design/Shark/Helper/Twig.php(56): Twig_Template->display(false)
+#2 /var/www/design/Shark/Core/Control.php(36): Shark\Helper\Twig->display('site/home.html', false)
+#3 /var/www/design/app/control/review/Home.php(29): Shark\Core\Control->display('site/home.html', false)
+#4 /var/www/design/app/control/review.php(45): app\control\review\Home->index()
+#5 [internal function]: {closure}()
+#6 /var/www/design/Slim/Route.php(462): call_user_func_array(Object(Closure), Array)
+#7 /var/www/design/Slim/Slim.php(1326): Slim\Route->dispatch()
+#8 /var/www/design/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#9 /var/www/design/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#10 /var/www/design/Shark/Middleware/Nocache.php(44): Slim\Middleware\MethodOverride->call()
+#11 /var/www/design/Slim/Middleware/PrettyExceptions.php(67): Shark\Middleware\Nocache->call()
+#12 /var/www/design/Slim/Slim.php(1271): Slim\Middleware\PrettyExceptions->call()
+#13 /var/www/design/index.php(84): Slim\Slim->run()
+#14 {main}
+ERROR - 2014-07-02T16:19:27+08:00 - exception 'RuntimeException' with message 'There is not app/control/review/Css.php file.' in /var/www/design/app/control/review.php:50
+Stack trace:
+#0 [internal function]: {closure}(Array)
+#1 /var/www/design/Slim/Route.php(462): call_user_func_array(Object(Closure), Array)
+#2 /var/www/design/Slim/Slim.php(1326): Slim\Route->dispatch()
+#3 /var/www/design/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#4 /var/www/design/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#5 /var/www/design/Shark/Middleware/Nocache.php(44): Slim\Middleware\MethodOverride->call()
+#6 /var/www/design/Slim/Middleware/PrettyExceptions.php(67): Shark\Middleware\Nocache->call()
+#7 /var/www/design/Slim/Slim.php(1271): Slim\Middleware\PrettyExceptions->call()
+#8 /var/www/design/index.php(84): Slim\Slim->run()
+#9 {main}
+ERROR - 2014-07-02T16:24:37+08:00 - exception 'RuntimeException' with message 'There is not app/control/review/Css.php file.' in /var/www/design/app/control/review.php:50
+Stack trace:
+#0 [internal function]: {closure}(Array)
+#1 /var/www/design/Slim/Route.php(462): call_user_func_array(Object(Closure), Array)
+#2 /var/www/design/Slim/Slim.php(1326): Slim\Route->dispatch()
+#3 /var/www/design/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#4 /var/www/design/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#5 /var/www/design/Shark/Middleware/Nocache.php(44): Slim\Middleware\MethodOverride->call()
+#6 /var/www/design/Slim/Middleware/PrettyExceptions.php(67): Shark\Middleware\Nocache->call()
+#7 /var/www/design/Slim/Slim.php(1271): Slim\Middleware\PrettyExceptions->call()
+#8 /var/www/design/index.php(84): Slim\Slim->run()
+#9 {main}
+ERROR - 2014-07-02T16:57:11+08:00 - exception 'ErrorException' with message 'Undefined index: pwd' in /var/www/design/app/control/login.php:43
+Stack trace:
+#0 /var/www/design/app/control/login.php(43): Slim\Slim::handleErrors(8, 'Undefined index...', '/var/www/design...', 43, Array)
+#1 [internal function]: {closure}()
+#2 /var/www/design/Slim/Route.php(462): call_user_func_array(Object(Closure), Array)
+#3 /var/www/design/Slim/Slim.php(1326): Slim\Route->dispatch()
+#4 /var/www/design/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#5 /var/www/design/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#6 /var/www/design/Shark/Middleware/Nocache.php(44): Slim\Middleware\MethodOverride->call()
+#7 /var/www/design/Slim/Middleware/PrettyExceptions.php(67): Shark\Middleware\Nocache->call()
+#8 /var/www/design/Slim/Slim.php(1271): Slim\Middleware\PrettyExceptions->call()
+#9 /var/www/design/index.php(84): Slim\Slim->run()
+#10 {main}
+ERROR - 2014-07-02T16:59:04+08:00 - exception 'RuntimeException' with message 'There is not app/control/admin/Order.php file.' in /var/www/design/app/control/admin.php:45
+Stack trace:
+#0 [internal function]: {closure}(Array)
+#1 /var/www/design/Slim/Route.php(462): call_user_func_array(Object(Closure), Array)
+#2 /var/www/design/Slim/Slim.php(1326): Slim\Route->dispatch()
+#3 /var/www/design/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#4 /var/www/design/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#5 /var/www/design/Shark/Middleware/Nocache.php(44): Slim\Middleware\MethodOverride->call()
+#6 /var/www/design/Slim/Middleware/PrettyExceptions.php(67): Shark\Middleware\Nocache->call()
+#7 /var/www/design/Slim/Slim.php(1271): Slim\Middleware\PrettyExceptions->call()
+#8 /var/www/design/index.php(84): Slim\Slim->run()
+#9 {main}
+ERROR - 2014-07-02T17:00:26+08:00 - exception 'RuntimeException' with message 'There is not app/control/review/Preview.php file.' in /var/www/design/app/control/review.php:50
+Stack trace:
+#0 [internal function]: {closure}(Array)
+#1 /var/www/design/Slim/Route.php(462): call_user_func_array(Object(Closure), Array)
+#2 /var/www/design/Slim/Slim.php(1326): Slim\Route->dispatch()
+#3 /var/www/design/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#4 /var/www/design/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#5 /var/www/design/Shark/Middleware/Nocache.php(44): Slim\Middleware\MethodOverride->call()
+#6 /var/www/design/Slim/Middleware/PrettyExceptions.php(67): Shark\Middleware\Nocache->call()
+#7 /var/www/design/Slim/Slim.php(1271): Slim\Middleware\PrettyExceptions->call()
+#8 /var/www/design/index.php(84): Slim\Slim->run()
+#9 {main}
+ERROR - 2014-07-02T17:45:43+08:00 - exception 'RuntimeException' with message 'There is not app/control/review/Finish.php file.' in /var/www/design/app/control/review.php:50
+Stack trace:
+#0 [internal function]: {closure}(Array)
+#1 /var/www/design/Slim/Route.php(462): call_user_func_array(Object(Closure), Array)
+#2 /var/www/design/Slim/Slim.php(1326): Slim\Route->dispatch()
+#3 /var/www/design/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#4 /var/www/design/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#5 /var/www/design/Shark/Middleware/Nocache.php(44): Slim\Middleware\MethodOverride->call()
+#6 /var/www/design/Slim/Middleware/PrettyExceptions.php(67): Shark\Middleware\Nocache->call()
+#7 /var/www/design/Slim/Slim.php(1271): Slim\Middleware\PrettyExceptions->call()
+#8 /var/www/design/index.php(84): Slim\Slim->run()
+#9 {main}
+ERROR - 2014-07-02T18:57:11+08:00 - exception 'RuntimeException' with message 'There is not app/control/review/Preview.php file.' in /var/www/design/app/control/review.php:50
+Stack trace:
+#0 [internal function]: {closure}(Array)
+#1 /var/www/design/Slim/Route.php(462): call_user_func_array(Object(Closure), Array)
+#2 /var/www/design/Slim/Slim.php(1326): Slim\Route->dispatch()
+#3 /var/www/design/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#4 /var/www/design/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#5 /var/www/design/Shark/Middleware/Nocache.php(44): Slim\Middleware\MethodOverride->call()
+#6 /var/www/design/Slim/Middleware/PrettyExceptions.php(67): Shark\Middleware\Nocache->call()
+#7 /var/www/design/Slim/Slim.php(1271): Slim\Middleware\PrettyExceptions->call()
+#8 /var/www/design/index.php(84): Slim\Slim->run()
+#9 {main}
+ERROR - 2014-07-02T18:57:30+08:00 - exception 'RuntimeException' with message 'There is not app/control/review/Preview.php file.' in /var/www/design/app/control/review.php:50
+Stack trace:
+#0 [internal function]: {closure}(Array)
+#1 /var/www/design/Slim/Route.php(462): call_user_func_array(Object(Closure), Array)
+#2 /var/www/design/Slim/Slim.php(1326): Slim\Route->dispatch()
+#3 /var/www/design/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#4 /var/www/design/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#5 /var/www/design/Shark/Middleware/Nocache.php(44): Slim\Middleware\MethodOverride->call()
+#6 /var/www/design/Slim/Middleware/PrettyExceptions.php(67): Shark\Middleware\Nocache->call()
+#7 /var/www/design/Slim/Slim.php(1271): Slim\Middleware\PrettyExceptions->call()
+#8 /var/www/design/index.php(84): Slim\Slim->run()
+#9 {main}
+ERROR - 2014-07-02T19:00:40+08:00 - exception 'ErrorException' with message 'Missing argument 1 for app\model\Category::loadAll(), called in /var/www/design/app/control/review/Opus.php on line 27 and defined' in /var/www/design/app/model/Category.php:16
+Stack trace:
+#0 /var/www/design/app/model/Category.php(16): Slim\Slim::handleErrors(2, 'Missing argumen...', '/var/www/design...', 16, Array)
+#1 /var/www/design/app/control/review/Opus.php(27): app\model\Category->loadAll()
+#2 /var/www/design/app/control/review.php(45): app\control\review\Opus->index()
+#3 [internal function]: {closure}(Array)
+#4 /var/www/design/Slim/Route.php(462): call_user_func_array(Object(Closure), Array)
+#5 /var/www/design/Slim/Slim.php(1326): Slim\Route->dispatch()
+#6 /var/www/design/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#7 /var/www/design/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#8 /var/www/design/Shark/Middleware/Nocache.php(44): Slim\Middleware\MethodOverride->call()
+#9 /var/www/design/Slim/Middleware/PrettyExceptions.php(67): Shark\Middleware\Nocache->call()
+#10 /var/www/design/Slim/Slim.php(1271): Slim\Middleware\PrettyExceptions->call()
+#11 /var/www/design/index.php(84): Slim\Slim->run()
+#12 {main}
+ERROR - 2014-07-02T19:01:10+08:00 - exception 'ErrorException' with message 'Undefined variable: join' in /var/www/design/app/model/Opus.php:35
+Stack trace:
+#0 /var/www/design/app/model/Opus.php(35): Slim\Slim::handleErrors(8, 'Undefined varia...', '/var/www/design...', 35, Array)
+#1 /var/www/design/app/control/review/Opus.php(30): app\model\Opus->loadAll(Array)
+#2 /var/www/design/app/control/review.php(45): app\control\review\Opus->index()
+#3 [internal function]: {closure}(Array)
+#4 /var/www/design/Slim/Route.php(462): call_user_func_array(Object(Closure), Array)
+#5 /var/www/design/Slim/Slim.php(1326): Slim\Route->dispatch()
+#6 /var/www/design/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#7 /var/www/design/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#8 /var/www/design/Shark/Middleware/Nocache.php(44): Slim\Middleware\MethodOverride->call()
+#9 /var/www/design/Slim/Middleware/PrettyExceptions.php(67): Shark\Middleware\Nocache->call()
+#10 /var/www/design/Slim/Slim.php(1271): Slim\Middleware\PrettyExceptions->call()
+#11 /var/www/design/index.php(84): Slim\Slim->run()
+#12 {main}
+ERROR - 2014-07-02T19:01:53+08:00 - exception 'ErrorException' with message 'Undefined variable: out' in /var/www/design/app/model/Opus.php:46
+Stack trace:
+#0 /var/www/design/app/model/Opus.php(46): Slim\Slim::handleErrors(8, 'Undefined varia...', '/var/www/design...', 46, Array)
+#1 /var/www/design/app/control/review/Opus.php(30): app\model\Opus->loadAll(Array)
+#2 /var/www/design/app/control/review.php(45): app\control\review\Opus->index()
+#3 [internal function]: {closure}(Array)
+#4 /var/www/design/Slim/Route.php(462): call_user_func_array(Object(Closure), Array)
+#5 /var/www/design/Slim/Slim.php(1326): Slim\Route->dispatch()
+#6 /var/www/design/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#7 /var/www/design/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#8 /var/www/design/Shark/Middleware/Nocache.php(44): Slim\Middleware\MethodOverride->call()
+#9 /var/www/design/Slim/Middleware/PrettyExceptions.php(67): Shark\Middleware\Nocache->call()
+#10 /var/www/design/Slim/Slim.php(1271): Slim\Middleware\PrettyExceptions->call()
+#11 /var/www/design/index.php(84): Slim\Slim->run()
+#12 {main}
+ERROR - 2014-07-02T19:02:12+08:00 - exception 'Twig_Error_Syntax' with message 'Unexpected tag name "pagination" (expecting closing tag for the "block" tag defined near line 4) in "site/opus.html" at line 34' in /var/www/design/Shark/Helper/Twig/Parser.php:174
+Stack trace:
+#0 /var/www/design/Shark/Helper/Twig/TokenParser/Block.php(45): Twig_Parser->subparse(Array, true)
+#1 /var/www/design/Shark/Helper/Twig/Parser.php(187): Twig_TokenParser_Block->parse(Object(Twig_Token))
+#2 /var/www/design/Shark/Helper/Twig/Parser.php(95): Twig_Parser->subparse(NULL, false)
+#3 /var/www/design/Shark/Helper/Twig/Environment.php(507): Twig_Parser->parse(Object(Twig_TokenStream))
+#4 /var/www/design/Shark/Helper/Twig/Environment.php(559): Twig_Environment->parse(Object(Twig_TokenStream))
+#5 /var/www/design/Shark/Helper/Twig/Environment.php(334): Twig_Environment->compileSource('{% extends 'sit...', 'site/opus.html')
+#6 /var/www/design/Shark/Helper/Twig.php(55): Twig_Environment->loadTemplate('site/opus.html')
+#7 /var/www/design/Shark/Core/Control.php(36): Shark\Helper\Twig->display('site/opus.html', Array)
+#8 /var/www/design/app/control/review/Opus.php(32): Shark\Core\Control->display('site/opus.html', Array)
+#9 /var/www/design/app/control/review.php(45): app\control\review\Opus->index()
+#10 [internal function]: {closure}(Array)
+#11 /var/www/design/Slim/Route.php(462): call_user_func_array(Object(Closure), Array)
+#12 /var/www/design/Slim/Slim.php(1326): Slim\Route->dispatch()
+#13 /var/www/design/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#14 /var/www/design/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#15 /var/www/design/Shark/Middleware/Nocache.php(44): Slim\Middleware\MethodOverride->call()
+#16 /var/www/design/Slim/Middleware/PrettyExceptions.php(67): Shark\Middleware\Nocache->call()
+#17 /var/www/design/Slim/Slim.php(1271): Slim\Middleware\PrettyExceptions->call()
+#18 /var/www/design/index.php(84): Slim\Slim->run()
+#19 {main}
+ERROR - 2014-07-02T19:23:17+08:00 - exception 'RuntimeException' with message 'There is not start method in app/control/review/Opus.php file.' in /var/www/design/app/control/review.php:39
+Stack trace:
+#0 [internal function]: {closure}(Array)
+#1 /var/www/design/Slim/Route.php(462): call_user_func_array(Object(Closure), Array)
+#2 /var/www/design/Slim/Slim.php(1326): Slim\Route->dispatch()
+#3 /var/www/design/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#4 /var/www/design/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#5 /var/www/design/Shark/Middleware/Nocache.php(44): Slim\Middleware\MethodOverride->call()
+#6 /var/www/design/Slim/Middleware/PrettyExceptions.php(67): Shark\Middleware\Nocache->call()
+#7 /var/www/design/Slim/Slim.php(1271): Slim\Middleware\PrettyExceptions->call()
+#8 /var/www/design/index.php(84): Slim\Slim->run()
+#9 {main}
+ERROR - 2014-07-02T20:39:08+08:00 - exception 'ErrorException' with message 'PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /var/www/design/app/model/Opus.php:36
+Stack trace:
+#0 [internal function]: Slim\Slim::handleErrors(2, 'PDOStatement::e...', '/var/www/design...', 36, Array)
+#1 /var/www/design/app/model/Opus.php(36): PDOStatement->execute()
+#2 /var/www/design/app/control/review/Opus.php(30): app\model\Opus->loadAll(Array)
+#3 /var/www/design/app/control/review.php(45): app\control\review\Opus->index()
+#4 [internal function]: {closure}(Array)
+#5 /var/www/design/Slim/Route.php(462): call_user_func_array(Object(Closure), Array)
+#6 /var/www/design/Slim/Slim.php(1326): Slim\Route->dispatch()
+#7 /var/www/design/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#8 /var/www/design/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#9 /var/www/design/Shark/Middleware/Nocache.php(44): Slim\Middleware\MethodOverride->call()
+#10 /var/www/design/Slim/Middleware/PrettyExceptions.php(67): Shark\Middleware\Nocache->call()
+#11 /var/www/design/Slim/Slim.php(1271): Slim\Middleware\PrettyExceptions->call()
+#12 /var/www/design/index.php(84): Slim\Slim->run()
+#13 {main}
+ERROR - 2014-07-02T20:39:51+08:00 - exception 'ErrorException' with message 'Undefined index: uid' in /var/www/design/app/model/Opus.php:22
+Stack trace:
+#0 /var/www/design/app/model/Opus.php(22): Slim\Slim::handleErrors(8, 'Undefined index...', '/var/www/design...', 22, Array)
+#1 /var/www/design/app/control/review/Opus.php(30): app\model\Opus->loadAll(Array)
+#2 /var/www/design/app/control/review.php(45): app\control\review\Opus->index()
+#3 [internal function]: {closure}(Array)
+#4 /var/www/design/Slim/Route.php(462): call_user_func_array(Object(Closure), Array)
+#5 /var/www/design/Slim/Slim.php(1326): Slim\Route->dispatch()
+#6 /var/www/design/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#7 /var/www/design/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#8 /var/www/design/Shark/Middleware/Nocache.php(44): Slim\Middleware\MethodOverride->call()
+#9 /var/www/design/Slim/Middleware/PrettyExceptions.php(67): Shark\Middleware\Nocache->call()
+#10 /var/www/design/Slim/Slim.php(1271): Slim\Middleware\PrettyExceptions->call()
+#11 /var/www/design/index.php(84): Slim\Slim->run()
+#12 {main}
+ERROR - 2014-07-02T20:41:59+08:00 - exception 'ErrorException' with message 'Undefined index: uid' in /var/www/design/app/model/Opus.php:22
+Stack trace:
+#0 /var/www/design/app/model/Opus.php(22): Slim\Slim::handleErrors(8, 'Undefined index...', '/var/www/design...', 22, Array)
+#1 /var/www/design/app/control/review/Opus.php(30): app\model\Opus->loadAll(Array)
+#2 /var/www/design/app/control/review.php(45): app\control\review\Opus->index()
+#3 [internal function]: {closure}(Array)
+#4 /var/www/design/Slim/Route.php(462): call_user_func_array(Object(Closure), Array)
+#5 /var/www/design/Slim/Slim.php(1326): Slim\Route->dispatch()
+#6 /var/www/design/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#7 /var/www/design/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#8 /var/www/design/Shark/Middleware/Nocache.php(44): Slim\Middleware\MethodOverride->call()
+#9 /var/www/design/Slim/Middleware/PrettyExceptions.php(67): Shark\Middleware\Nocache->call()
+#10 /var/www/design/Slim/Slim.php(1271): Slim\Middleware\PrettyExceptions->call()
+#11 /var/www/design/index.php(84): Slim\Slim->run()
+#12 {main}
+ERROR - 2014-07-02T20:42:00+08:00 - exception 'ErrorException' with message 'Undefined index: uid' in /var/www/design/app/model/Opus.php:22
+Stack trace:
+#0 /var/www/design/app/model/Opus.php(22): Slim\Slim::handleErrors(8, 'Undefined index...', '/var/www/design...', 22, Array)
+#1 /var/www/design/app/control/review/Opus.php(30): app\model\Opus->loadAll(Array)
+#2 /var/www/design/app/control/review.php(45): app\control\review\Opus->index()
+#3 [internal function]: {closure}(Array)
+#4 /var/www/design/Slim/Route.php(462): call_user_func_array(Object(Closure), Array)
+#5 /var/www/design/Slim/Slim.php(1326): Slim\Route->dispatch()
+#6 /var/www/design/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#7 /var/www/design/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#8 /var/www/design/Shark/Middleware/Nocache.php(44): Slim\Middleware\MethodOverride->call()
+#9 /var/www/design/Slim/Middleware/PrettyExceptions.php(67): Shark\Middleware\Nocache->call()
+#10 /var/www/design/Slim/Slim.php(1271): Slim\Middleware\PrettyExceptions->call()
+#11 /var/www/design/index.php(84): Slim\Slim->run()
+#12 {main}
+ERROR - 2014-07-02T20:42:00+08:00 - exception 'ErrorException' with message 'Undefined index: uid' in /var/www/design/app/model/Opus.php:22
+Stack trace:
+#0 /var/www/design/app/model/Opus.php(22): Slim\Slim::handleErrors(8, 'Undefined index...', '/var/www/design...', 22, Array)
+#1 /var/www/design/app/control/review/Opus.php(30): app\model\Opus->loadAll(Array)
+#2 /var/www/design/app/control/review.php(45): app\control\review\Opus->index()
+#3 [internal function]: {closure}(Array)
+#4 /var/www/design/Slim/Route.php(462): call_user_func_array(Object(Closure), Array)
+#5 /var/www/design/Slim/Slim.php(1326): Slim\Route->dispatch()
+#6 /var/www/design/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#7 /var/www/design/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#8 /var/www/design/Shark/Middleware/Nocache.php(44): Slim\Middleware\MethodOverride->call()
+#9 /var/www/design/Slim/Middleware/PrettyExceptions.php(67): Shark\Middleware\Nocache->call()
+#10 /var/www/design/Slim/Slim.php(1271): Slim\Middleware\PrettyExceptions->call()
+#11 /var/www/design/index.php(84): Slim\Slim->run()
+#12 {main}
+ERROR - 2014-07-02T22:15:53+08:00 - exception 'ErrorException' with message 'Undefined index: uid' in /var/www/design/app/model/Opus.php:22
+Stack trace:
+#0 /var/www/design/app/model/Opus.php(22): Slim\Slim::handleErrors(8, 'Undefined index...', '/var/www/design...', 22, Array)
+#1 /var/www/design/app/control/review/Opus.php(30): app\model\Opus->loadAll(Array)
+#2 /var/www/design/app/control/review.php(45): app\control\review\Opus->index()
+#3 [internal function]: {closure}(Array)
+#4 /var/www/design/Slim/Route.php(462): call_user_func_array(Object(Closure), Array)
+#5 /var/www/design/Slim/Slim.php(1326): Slim\Route->dispatch()
+#6 /var/www/design/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#7 /var/www/design/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#8 /var/www/design/Shark/Middleware/Nocache.php(44): Slim\Middleware\MethodOverride->call()
+#9 /var/www/design/Slim/Middleware/PrettyExceptions.php(67): Shark\Middleware\Nocache->call()
+#10 /var/www/design/Slim/Slim.php(1271): Slim\Middleware\PrettyExceptions->call()
+#11 /var/www/design/index.php(84): Slim\Slim->run()
+#12 {main}
+ERROR - 2014-07-02T22:31:44+08:00 - exception 'ErrorException' with message 'Undefined index: rule' in /var/www/design/app/model/Opus.php:23
+Stack trace:
+#0 /var/www/design/app/model/Opus.php(23): Slim\Slim::handleErrors(8, 'Undefined index...', '/var/www/design...', 23, Array)
+#1 /var/www/design/app/control/review/Opus.php(32): app\model\Opus->loadAllForReviewer(Array)
+#2 /var/www/design/app/control/review.php(45): app\control\review\Opus->index()
+#3 [internal function]: {closure}(Array)
+#4 /var/www/design/Slim/Route.php(462): call_user_func_array(Object(Closure), Array)
+#5 /var/www/design/Slim/Slim.php(1326): Slim\Route->dispatch()
+#6 /var/www/design/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#7 /var/www/design/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#8 /var/www/design/Shark/Middleware/Nocache.php(44): Slim\Middleware\MethodOverride->call()
+#9 /var/www/design/Slim/Middleware/PrettyExceptions.php(67): Shark\Middleware\Nocache->call()
+#10 /var/www/design/Slim/Slim.php(1271): Slim\Middleware\PrettyExceptions->call()
+#11 /var/www/design/index.php(84): Slim\Slim->run()
+#12 {main}
+ERROR - 2014-07-02T22:54:47+08:00 - exception 'ErrorException' with message 'Undefined index: roleid' in /var/www/design/app/control/login.php:51
+Stack trace:
+#0 /var/www/design/app/control/login.php(51): Slim\Slim::handleErrors(8, 'Undefined index...', '/var/www/design...', 51, Array)
+#1 [internal function]: {closure}()
+#2 /var/www/design/Slim/Route.php(462): call_user_func_array(Object(Closure), Array)
+#3 /var/www/design/Slim/Slim.php(1326): Slim\Route->dispatch()
+#4 /var/www/design/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#5 /var/www/design/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#6 /var/www/design/Shark/Middleware/Nocache.php(44): Slim\Middleware\MethodOverride->call()
+#7 /var/www/design/Slim/Middleware/PrettyExceptions.php(67): Shark\Middleware\Nocache->call()
+#8 /var/www/design/Slim/Slim.php(1271): Slim\Middleware\PrettyExceptions->call()
+#9 /var/www/design/index.php(84): Slim\Slim->run()
+#10 {main}
+ERROR - 2014-07-02T22:54:49+08:00 - exception 'ErrorException' with message 'Undefined index: roleid' in /var/www/design/app/control/login.php:51
+Stack trace:
+#0 /var/www/design/app/control/login.php(51): Slim\Slim::handleErrors(8, 'Undefined index...', '/var/www/design...', 51, Array)
+#1 [internal function]: {closure}()
+#2 /var/www/design/Slim/Route.php(462): call_user_func_array(Object(Closure), Array)
+#3 /var/www/design/Slim/Slim.php(1326): Slim\Route->dispatch()
+#4 /var/www/design/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#5 /var/www/design/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#6 /var/www/design/Shark/Middleware/Nocache.php(44): Slim\Middleware\MethodOverride->call()
+#7 /var/www/design/Slim/Middleware/PrettyExceptions.php(67): Shark\Middleware\Nocache->call()
+#8 /var/www/design/Slim/Slim.php(1271): Slim\Middleware\PrettyExceptions->call()
+#9 /var/www/design/index.php(84): Slim\Slim->run()
+#10 {main}
+ERROR - 2014-07-02T22:54:57+08:00 - exception 'ErrorException' with message 'Undefined index: roleid' in /var/www/design/app/control/login.php:51
+Stack trace:
+#0 /var/www/design/app/control/login.php(51): Slim\Slim::handleErrors(8, 'Undefined index...', '/var/www/design...', 51, Array)
+#1 [internal function]: {closure}()
+#2 /var/www/design/Slim/Route.php(462): call_user_func_array(Object(Closure), Array)
+#3 /var/www/design/Slim/Slim.php(1326): Slim\Route->dispatch()
+#4 /var/www/design/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#5 /var/www/design/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#6 /var/www/design/Shark/Middleware/Nocache.php(44): Slim\Middleware\MethodOverride->call()
+#7 /var/www/design/Slim/Middleware/PrettyExceptions.php(67): Shark\Middleware\Nocache->call()
+#8 /var/www/design/Slim/Slim.php(1271): Slim\Middleware\PrettyExceptions->call()
+#9 /var/www/design/index.php(84): Slim\Slim->run()
+#10 {main}
+ERROR - 2014-07-02T22:55:58+08:00 - exception 'ErrorException' with message 'Undefined index: role' in /var/www/design/app/control/review.php:17
+Stack trace:
+#0 /var/www/design/app/control/review.php(17): Slim\Slim::handleErrors(8, 'Undefined index...', '/var/www/design...', 17, Array)
+#1 [internal function]: {closure}(Object(Slim\Route))
+#2 /var/www/design/Slim/Route.php(459): call_user_func_array(Object(Closure), Array)
+#3 /var/www/design/Slim/Slim.php(1326): Slim\Route->dispatch()
+#4 /var/www/design/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#5 /var/www/design/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#6 /var/www/design/Shark/Middleware/Nocache.php(44): Slim\Middleware\MethodOverride->call()
+#7 /var/www/design/Slim/Middleware/PrettyExceptions.php(67): Shark\Middleware\Nocache->call()
+#8 /var/www/design/Slim/Slim.php(1271): Slim\Middleware\PrettyExceptions->call()
+#9 /var/www/design/index.php(84): Slim\Slim->run()
+#10 {main}
+ERROR - 2014-07-02T23:03:55+08:00 - exception 'RuntimeException' with message 'There is not app/control/admin/Home.php file.' in /var/www/design/app/control/admin.php:45
+Stack trace:
+#0 [internal function]: {closure}()
+#1 /var/www/design/Slim/Route.php(462): call_user_func_array(Object(Closure), Array)
+#2 /var/www/design/Slim/Slim.php(1326): Slim\Route->dispatch()
+#3 /var/www/design/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#4 /var/www/design/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#5 /var/www/design/Shark/Middleware/Nocache.php(44): Slim\Middleware\MethodOverride->call()
+#6 /var/www/design/Slim/Middleware/PrettyExceptions.php(67): Shark\Middleware\Nocache->call()
+#7 /var/www/design/Slim/Slim.php(1271): Slim\Middleware\PrettyExceptions->call()
+#8 /var/www/design/index.php(84): Slim\Slim->run()
+#9 {main}
+ERROR - 2014-07-02T23:04:07+08:00 - exception 'RuntimeException' with message 'There is not app/control/admin/Home.php file.' in /var/www/design/app/control/admin.php:45
+Stack trace:
+#0 [internal function]: {closure}()
+#1 /var/www/design/Slim/Route.php(462): call_user_func_array(Object(Closure), Array)
+#2 /var/www/design/Slim/Slim.php(1326): Slim\Route->dispatch()
+#3 /var/www/design/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#4 /var/www/design/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#5 /var/www/design/Shark/Middleware/Nocache.php(44): Slim\Middleware\MethodOverride->call()
+#6 /var/www/design/Slim/Middleware/PrettyExceptions.php(67): Shark\Middleware\Nocache->call()
+#7 /var/www/design/Slim/Slim.php(1271): Slim\Middleware\PrettyExceptions->call()
+#8 /var/www/design/index.php(84): Slim\Slim->run()
+#9 {main}
+ERROR - 2014-07-02T23:04:10+08:00 - exception 'RuntimeException' with message 'There is not app/control/admin/Home.php file.' in /var/www/design/app/control/admin.php:45
+Stack trace:
+#0 [internal function]: {closure}()
+#1 /var/www/design/Slim/Route.php(462): call_user_func_array(Object(Closure), Array)
+#2 /var/www/design/Slim/Slim.php(1326): Slim\Route->dispatch()
+#3 /var/www/design/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#4 /var/www/design/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#5 /var/www/design/Shark/Middleware/Nocache.php(44): Slim\Middleware\MethodOverride->call()
+#6 /var/www/design/Slim/Middleware/PrettyExceptions.php(67): Shark\Middleware\Nocache->call()
+#7 /var/www/design/Slim/Slim.php(1271): Slim\Middleware\PrettyExceptions->call()
+#8 /var/www/design/index.php(84): Slim\Slim->run()
+#9 {main}
+ERROR - 2014-07-02T23:04:15+08:00 - exception 'RuntimeException' with message 'There is not app/control/admin/Home.php file.' in /var/www/design/app/control/admin.php:45
+Stack trace:
+#0 [internal function]: {closure}()
+#1 /var/www/design/Slim/Route.php(462): call_user_func_array(Object(Closure), Array)
+#2 /var/www/design/Slim/Slim.php(1326): Slim\Route->dispatch()
+#3 /var/www/design/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#4 /var/www/design/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#5 /var/www/design/Shark/Middleware/Nocache.php(44): Slim\Middleware\MethodOverride->call()
+#6 /var/www/design/Slim/Middleware/PrettyExceptions.php(67): Shark\Middleware\Nocache->call()
+#7 /var/www/design/Slim/Slim.php(1271): Slim\Middleware\PrettyExceptions->call()
+#8 /var/www/design/index.php(84): Slim\Slim->run()
+#9 {main}

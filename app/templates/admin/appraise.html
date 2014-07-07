@@ -1,0 +1,26 @@
+{% extends 'admin/admin.html' %}
+
+{% block data %}
+<div id="appraise">
+    <div class="ti_top">
+         <h2>评审</h2>
+     </div>
+     <div class="ps_list">
+        {% for val in data %}
+        <div class="li">
+           <div class="name fl">{{val.nickName}}</div>
+           <div class="op fr">
+            <a href="/admin/appraise/assign/?uid={{val.userId}}">分配作品</a>
+            <a href="/admin/appraise/start/?uid={{val.userId}}">未评审作品</a>
+            <a href="/admin/appraise/finish/?uid={{val.userId}}">已评审作品</a>
+           </div>
+        </div>
+        {% endfor %}
+
+        {{ pagination |raw }}
+     </div>
+</div>
+
+<input type="hidden" name="_" value="/admin/appraise/">
+
+{% endblock %}

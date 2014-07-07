@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>{{common.title|default('设计成就中国')}}</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/jquery-ui-1.7.1.custom.css" type="text/css" />
+    <link rel="Stylesheet" href="/assets/css/ui.slider.extras.css" type="text/css" />
+    <script type="text/javascript" src="/assets/js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery-ui-1.7.1.custom.min.js"></script>
+    <script type="text/javascript" src="/assets/js/selectToUISlider.jQuery.js"></script>
+    <script type="text/javascript" src="/assets/js/md5.min.js"></script>
+    <script type="text/javascript" src="/assets/js/app.js"></script>
+</head>
+<body>
+  <div class="header">
+     <div class="head_box">
+        <div class="logo fl"></div>
+        {% block menu %}
+        <div class="nav fr">
+           <a href="/review/" class="onclick">首页</a>
+           <a href="/review/opus/">作品预览</a>
+           <a href="/review/opus/start/">评审</a>
+           <a href="/review/opus/finish/">已评分作品</a>
+           <a href="/review/profile/">我的信息</a>
+           <a href="/review/help/">帮助</a>
+           <a class="last" href="/login/out/">退出</a>
+        </div>
+        {% endblock %}
+     </div>
+  </div>
+  <div class="w1000 home_text">
+    {% block data  %}
+    {% endblock %}
+  </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+{% extends 'admin/admin.html' %}
+
+{% block data %}
+<div id="appraise-finish">
+    <div class="ti_top">
+         <h2><a href="/admin/appraise/">返回列表</a></h2>
+     </div>
+     <div class="ps_list">
+        <div class="li">
+           <div class="name fl">{{user.nickName}}</div>
+           <div class="op fr">
+               <a href="/admin/appraise/assign/?uid={{search.uid}}">分配作品</a>
+               <a href="/admin/appraise/start/?uid={{search.uid}}">未评审作品</a>
+               <a href="/admin/appraise/finish/?uid={{search.uid}}" class="onclick">已评审作品</a>
+           </div>
+        </div>
+     </div>
+     <div class="list">
+        {% for val in data %}
+         <div class="li">
+            <div class="pic"><img src=""></div>
+            <p>编号：{{val.number}}</p>
+            <p>公司：{{val.company}}</p>
+            <p>作品：{{val.name}}</p>
+            {% if val.content %}
+                {% for va in val.content %}
+                    {% set v = json_decode(va) %}
+                    <div>
+                    {{v.name}}: <span style="font-family:Georgia, 'Times New Roman', Times, serif; font-size:32px;">{{v.val}}</span>
+                    </div>
+                {% endfor %}
+            {% endif %}
+         </div>
+         {% endfor %}
+        {{ pagination |raw }}
+     </div>
+</div>
+
+<input type="hidden" name="_" value="/admin/appraise/">
+
+{% endblock %}
